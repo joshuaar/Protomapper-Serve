@@ -1,0 +1,6 @@
+run
+assembly
+assemble
+assembly
+eclipse with-source=true
+run
