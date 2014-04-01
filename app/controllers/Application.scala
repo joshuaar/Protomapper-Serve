@@ -11,7 +11,7 @@ import play.api.mvc._
 object Application extends Controller {
   val parser = new PatternParser
   val compiler = new PatternCompiler(parser,3)
-  val ix = new NIOFSDirectory(new File("/media/josh/cdb5cb89-333d-4496-a750-b7911cfa70ba/luc_ix"))
+  val ix = new NIOFSDirectory(new File("/root/lucene4"))
   val access = new LuceneAccess(ix)
   val search = new Searcher(compiler,access)
   def index = Action {

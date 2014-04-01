@@ -1,4 +1,4 @@
-[0m[[0minfo[0m] [0mUpdating {file:/home/josh/workspace2/Protomapper/Protomapper-Serve/project/}protomapper-serve-build...[0m
+[0m[[0minfo[0m] [0mUpdating {file:/root/Protomapper-Serve/project/}protomapper-serve-build...[0m
 [0m[[0mdebug[0m] [0m:: resolving dependencies :: default#protomapper-serve-build;0.1-SNAPSHOT[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
@@ -428,18 +428,9 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies default#protomapper-serve-build;0.1-SNAPSHOT->com.eed3si9n#sbt-assembly;0.9.0 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.eed3si9n#sbt-assembly;0.9.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.eed3si9n#sbt-assembly;0.9.0 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.9.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.9.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for com.eed3si9n#sbt-assembly;0.9.0[0m
-[0m[[0mdebug[0m] [0m		tried http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.9.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	sbt-plugin-releases: found md file for com.eed3si9n#sbt-assembly;0.9.0[0m
-[0m[[0mdebug[0m] [0m		=> http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.9.0/ivys/ivy.xml (0.9.0)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.9.0/ivys/ivy.xml ...[0m
-[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.9.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.9.0/ivys/ivy.xml.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.9.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.eed3si9n#sbt-assembly;0.9.0!ivy.xml(ivy.original) (769ms)[0m
-[0m[[0mdebug[0m] [0m	found com.eed3si9n#sbt-assembly;0.9.0 in sbt-plugin-releases[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.eed3si9n#sbt-assembly;0.9.0[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: com.eed3si9n#sbt-assembly;0.9.0[0m
+[0m[[0mdebug[0m] [0m	found com.eed3si9n#sbt-assembly;0.9.0 in sbt-chain[0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#protomapper-serve-build;0.1-SNAPSHOT [runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#protomapper-serve-build;0.1-SNAPSHOT [compile][0m
@@ -2880,15 +2871,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies default#protomapper-serve-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.2 [scala-tool->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#protomapper-serve-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.2 [scala-tool->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#protomapper-serve-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.2 [scala-tool->optional(default)][0m
-[0m[[0mdebug[0m] [0m	resolved ivy file produced in /home/josh/workspace2/Protomapper/Protomapper-Serve/project/target/resolution-cache/default/protomapper-serve-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml[0m
+[0m[[0mdebug[0m] [0m	resolved ivy file produced in /root/Protomapper-Serve/project/target/resolution-cache/default/protomapper-serve-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml[0m
 [0m[[0mdebug[0m] [0m:: downloading artifacts ::[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#sbt-plugin;2.2.1!sbt-plugin.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.9.0/jars/sbt-assembly.jar[0m
-[0m[[0minfo[0m] [0mdownloading http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.9.0/jars/sbt-assembly.jar ...[0m
-[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.9.0/jars/sbt-assembly.jar[0m
-[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.9.0/jars/sbt-assembly.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.9.0/jars/sbt-assembly.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.eed3si9n#sbt-assembly;0.9.0!sbt-assembly.jar (1646ms)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.eed3si9n#sbt-assembly;0.9.0!sbt-assembly.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#sbt-link;2.2.1!sbt-link.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-exceptions;2.2.1!play-exceptions.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#routes-compiler_2.10;2.2.1!routes-compiler_2.10.jar[0m
@@ -2924,8 +2910,8 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalaz#scalaz-concurrent_2.10;7.0.2!scalaz-concurrent_2.10.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#sbt;0.13.0!sbt.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#main;0.13.0!main.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#compiler-interface;0.13.0!compiler-interface-src.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#compiler-interface;0.13.0!compiler-interface-bin.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#compiler-interface;0.13.0!compiler-interface-src.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#precompiled-2_8_2;0.13.0!compiler-interface-bin.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_2;0.13.0!compiler-interface-bin.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_3;0.13.0!compiler-interface-bin.jar[0m
@@ -2964,19 +2950,19 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.0!apply-macro.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.2!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 3000ms :: artifacts dl 1691ms[0m
-[0m[[0mdebug[0m] [0m	report for default#protomapper-serve-build;0.1-SNAPSHOT compile produced in /home/josh/workspace2/Protomapper/Protomapper-Serve/project/target/resolution-cache/reports/default-protomapper-serve-build-compile.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#protomapper-serve-build;0.1-SNAPSHOT runtime produced in /home/josh/workspace2/Protomapper/Protomapper-Serve/project/target/resolution-cache/reports/default-protomapper-serve-build-runtime.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#protomapper-serve-build;0.1-SNAPSHOT test produced in /home/josh/workspace2/Protomapper/Protomapper-Serve/project/target/resolution-cache/reports/default-protomapper-serve-build-test.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#protomapper-serve-build;0.1-SNAPSHOT provided produced in /home/josh/workspace2/Protomapper/Protomapper-Serve/project/target/resolution-cache/reports/default-protomapper-serve-build-provided.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#protomapper-serve-build;0.1-SNAPSHOT optional produced in /home/josh/workspace2/Protomapper/Protomapper-Serve/project/target/resolution-cache/reports/default-protomapper-serve-build-optional.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#protomapper-serve-build;0.1-SNAPSHOT compile-internal produced in /home/josh/workspace2/Protomapper/Protomapper-Serve/project/target/resolution-cache/reports/default-protomapper-serve-build-compile-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#protomapper-serve-build;0.1-SNAPSHOT runtime-internal produced in /home/josh/workspace2/Protomapper/Protomapper-Serve/project/target/resolution-cache/reports/default-protomapper-serve-build-runtime-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#protomapper-serve-build;0.1-SNAPSHOT test-internal produced in /home/josh/workspace2/Protomapper/Protomapper-Serve/project/target/resolution-cache/reports/default-protomapper-serve-build-test-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#protomapper-serve-build;0.1-SNAPSHOT plugin produced in /home/josh/workspace2/Protomapper/Protomapper-Serve/project/target/resolution-cache/reports/default-protomapper-serve-build-plugin.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#protomapper-serve-build;0.1-SNAPSHOT sources produced in /home/josh/workspace2/Protomapper/Protomapper-Serve/project/target/resolution-cache/reports/default-protomapper-serve-build-sources.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#protomapper-serve-build;0.1-SNAPSHOT docs produced in /home/josh/workspace2/Protomapper/Protomapper-Serve/project/target/resolution-cache/reports/default-protomapper-serve-build-docs.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#protomapper-serve-build;0.1-SNAPSHOT pom produced in /home/josh/workspace2/Protomapper/Protomapper-Serve/project/target/resolution-cache/reports/default-protomapper-serve-build-pom.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#protomapper-serve-build;0.1-SNAPSHOT scala-tool produced in /home/josh/workspace2/Protomapper/Protomapper-Serve/project/target/resolution-cache/reports/default-protomapper-serve-build-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (3000ms resolve - 1691ms download)[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 3906ms :: artifacts dl 134ms[0m
+[0m[[0mdebug[0m] [0m	report for default#protomapper-serve-build;0.1-SNAPSHOT compile produced in /root/Protomapper-Serve/project/target/resolution-cache/reports/default-protomapper-serve-build-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#protomapper-serve-build;0.1-SNAPSHOT runtime produced in /root/Protomapper-Serve/project/target/resolution-cache/reports/default-protomapper-serve-build-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#protomapper-serve-build;0.1-SNAPSHOT test produced in /root/Protomapper-Serve/project/target/resolution-cache/reports/default-protomapper-serve-build-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#protomapper-serve-build;0.1-SNAPSHOT provided produced in /root/Protomapper-Serve/project/target/resolution-cache/reports/default-protomapper-serve-build-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#protomapper-serve-build;0.1-SNAPSHOT optional produced in /root/Protomapper-Serve/project/target/resolution-cache/reports/default-protomapper-serve-build-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#protomapper-serve-build;0.1-SNAPSHOT compile-internal produced in /root/Protomapper-Serve/project/target/resolution-cache/reports/default-protomapper-serve-build-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#protomapper-serve-build;0.1-SNAPSHOT runtime-internal produced in /root/Protomapper-Serve/project/target/resolution-cache/reports/default-protomapper-serve-build-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#protomapper-serve-build;0.1-SNAPSHOT test-internal produced in /root/Protomapper-Serve/project/target/resolution-cache/reports/default-protomapper-serve-build-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#protomapper-serve-build;0.1-SNAPSHOT plugin produced in /root/Protomapper-Serve/project/target/resolution-cache/reports/default-protomapper-serve-build-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#protomapper-serve-build;0.1-SNAPSHOT sources produced in /root/Protomapper-Serve/project/target/resolution-cache/reports/default-protomapper-serve-build-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#protomapper-serve-build;0.1-SNAPSHOT docs produced in /root/Protomapper-Serve/project/target/resolution-cache/reports/default-protomapper-serve-build-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#protomapper-serve-build;0.1-SNAPSHOT pom produced in /root/Protomapper-Serve/project/target/resolution-cache/reports/default-protomapper-serve-build-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#protomapper-serve-build;0.1-SNAPSHOT scala-tool produced in /root/Protomapper-Serve/project/target/resolution-cache/reports/default-protomapper-serve-build-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (3906ms resolve - 134ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
