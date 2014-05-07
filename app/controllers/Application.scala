@@ -9,15 +9,29 @@ import java.io.File
 import play.api._
 import play.api.mvc._
 import play.api.libs.iteratee.Enumerator
+import play.api.mvc.Results._
 
 object Application extends Controller {
+  //get lucene directory defined in application.conf
+  val ixpath = Play.current.configuration.getString(
+      "application.ix_path").get 
+  val ixLen = Play.current.configuration.getString(
+      "application.ix_len").get.toInt
+  val ixMaxHits = Play.current.configuration.getString(
+      "application.max_hits").get.toInt
+      
+  //initialize lucene access singletons
   val parser = new PatternParser
-  val compiler = new PatternCompiler(parser,3)
-  val ix = new NIOFSDirectory(new File("/root/lucene4"))
-  val access = new LuceneAccess(ix)
+  val compiler = new PatternCompiler(parser,ixLen)
+  val ix = new NIOFSDirectory(new File(ixpath))
+  val access = new LuceneAccess(ix,ixLen,ixMaxHits)
   val search = new Searcher(compiler,access)
+  
+  
   def index = Action {
-    Ok(views.html.index("Protomapper ready"))
+    Redirect(
+    "/assets/Protomapper-ui/index.html"
+    )
   }
   
   def query(q:String,r:String) = Action {
@@ -46,7 +60,7 @@ object Application extends Controller {
     }
     val toEnumerate = new ClosableIterator()
     val dataContent:Enumerator[Array[Byte]] = Enumerator.enumerate(toEnumerate)
-    Ok.stream(dataContent.andThen({Enumerator.eof}))
+    Ok.stream(dataContent.andThen({Enumerator.eof})).withHeaders(CONTENT_TYPE -> "text/plain").withHeaders(CONTENT_DISPOSITION -> "attachment; filename=download.fasta")
   }
   
   def summary(q:String) = Action {

@@ -1,4 +1,6 @@
-name := "Protomapper-Serve"
+import play.Project._
+
+name := "protomapper-serve"
 
 version := "1.0-SNAPSHOT"
 
@@ -8,7 +10,7 @@ libraryDependencies ++= Seq(
   cache
 )     
 
-play.Project.playScalaSettings
+playScalaSettings
 
 scalaVersion := "2.10.1"
 
@@ -32,3 +34,13 @@ libraryDependencies ++= Seq(
   "org.biojava" % "biojava3-core" % "3.0.7",
   "org.scalatest" % "scalatest_2.10" % "1.9.2"  
 )
+
+lazy val protomapperServe = project.in(file("."))
+    .aggregate(protomapperSearch)
+    .dependsOn(protomapperSearch)
+
+lazy val protomapperSearch = project.in(file("modules/Protomapper-Search"))
+
+mappings in Universal ++=
+  (baseDirectory.value / "scripts" * "*" get) map
+    (x => x -> ("scripts/" + x.getName))

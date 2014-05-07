@@ -1,6 +1,5 @@
 run
-assembly
-assemble
-assembly
-eclipse with-source=true
+dist
+project protomapperServe
 run
+project protomapperSearch

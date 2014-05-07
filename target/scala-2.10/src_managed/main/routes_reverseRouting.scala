@@ -1,6 +1,6 @@
-// @SOURCE:/root/Protomapper-Serve/conf/routes
-// @HASH:b3124ce9841ad8b48d2d6d08a8af98fccb47f989
-// @DATE:Sat Mar 01 02:25:32 UTC 2014
+// @SOURCE:/home/josh/code/Protomapper-Serve/conf/routes
+// @HASH:ed6860754ae9843ba104396a7ba117234deb1bc4
+// @DATE:Tue May 06 12:25:54 MST 2014
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -13,17 +13,18 @@ import play.api.mvc._
 import Router.queryString
 
 
-// @LINE:11
+// @LINE:12
+// @LINE:9
 // @LINE:8
 // @LINE:7
 // @LINE:6
 package controllers {
 
-// @LINE:11
+// @LINE:12
 class ReverseAssets {
     
 
-// @LINE:11
+// @LINE:12
 def at(file:String): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
 }
@@ -32,11 +33,18 @@ def at(file:String): Call = {
 }
                           
 
+// @LINE:9
 // @LINE:8
 // @LINE:7
 // @LINE:6
 class ReverseApplication {
     
+
+// @LINE:9
+def download(q:String): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "download" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("q", q)))))
+}
+                                                
 
 // @LINE:6
 def index(): Call = {
@@ -62,17 +70,18 @@ def query(q:String, r:String): Call = {
                   
 
 
-// @LINE:11
+// @LINE:12
+// @LINE:9
 // @LINE:8
 // @LINE:7
 // @LINE:6
 package controllers.javascript {
 
-// @LINE:11
+// @LINE:12
 class ReverseAssets {
     
 
-// @LINE:11
+// @LINE:12
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
    """
@@ -86,11 +95,23 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:9
 // @LINE:8
 // @LINE:7
 // @LINE:6
 class ReverseApplication {
     
+
+// @LINE:9
+def download : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.download",
+   """
+      function(q) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "download" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("q", q)])})
+      }
+   """
+)
+                        
 
 // @LINE:6
 def index : JavascriptReverseRoute = JavascriptReverseRoute(
@@ -131,18 +152,19 @@ def query : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
-// @LINE:11
+// @LINE:12
+// @LINE:9
 // @LINE:8
 // @LINE:7
 // @LINE:6
 package controllers.ref {
 
 
-// @LINE:11
+// @LINE:12
 class ReverseAssets {
     
 
-// @LINE:11
+// @LINE:12
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
 )
@@ -151,11 +173,18 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
+// @LINE:9
 // @LINE:8
 // @LINE:7
 // @LINE:6
 class ReverseApplication {
     
+
+// @LINE:9
+def download(q:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.download(q), HandlerDef(this, "controllers.Application", "download", Seq(classOf[String]), "GET", """""", _prefix + """download""")
+)
+                      
 
 // @LINE:6
 def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(

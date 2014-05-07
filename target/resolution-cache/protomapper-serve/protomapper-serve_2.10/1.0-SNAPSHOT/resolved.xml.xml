@@ -4,10 +4,10 @@
 		module="protomapper-serve_2.10"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20140301022532"
+		publication="20140506124247"
 	>
 		<description>
-		Protomapper-Serve
+		protomapper-serve
 		</description>
 	</info>
 	<configurations>
@@ -34,12 +34,13 @@
 	<dependencies>
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.10.1" conf="scala-tool->default,optional(default)"/>
 		<dependency org="org.scala-lang" name="scala-library" rev="2.10.1" conf="scala-tool->default,optional(default);compile->default(compile)"/>
-		<dependency org="com.typesafe.play" name="play-jdbc_2.10" rev="2.2.1" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.play" name="anorm_2.10" rev="2.2.1" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.play" name="play-cache_2.10" rev="2.2.1" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.play" name="play_2.10" rev="2.2.1" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.play" name="play-test_2.10" rev="2.2.1" conf="test->default(compile)"/>
-		<dependency org="com.typesafe.play" name="play-docs_2.10" rev="2.2.1" conf="docs->default(compile)"/>
+		<dependency org="protomapper-search" name="protomapper-search_2.10" rev="0.1" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-jdbc_2.10" rev="2.2.3" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="anorm_2.10" rev="2.2.3" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-cache_2.10" rev="2.2.3" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play_2.10" rev="2.2.3" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-test_2.10" rev="2.2.3" conf="test->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-docs_2.10" rev="2.2.3" conf="docs->default(compile)"/>
 		<dependency org="org.scalatra" name="scalatra_2.10" rev="2.2.2" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.akka" name="akka-actor_2.10" rev="2.2-M3" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.akka" name="akka-slf4j_2.10" rev="2.2-M3" conf="compile->default(compile)"/>
