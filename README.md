@@ -5,7 +5,7 @@ The project consists of a Play! application in addition to the underlying
 Lucene-based search library, and can be run in either standalone mode or
 as a library to be imported into custom projects
 
-#About
+##About
 This is a search engine created for biological sequences, although the principals
 are useful for any fulltext search for finite nonrecursive regular expressions.
 Some examples of finite regular expressions are as follows:
@@ -34,7 +34,7 @@ This means, no parentheses, no * (but you can do ranges), and no lookahead/lookb
 
 These restrictions enable super fast fulltext searches of huge databases for regular expression-like patterns using Lucene
 
-#Build as Server
+##Build as Server
 This software is meant to be built with play 2.2.3 with the following command:
 
     play dist
@@ -49,7 +49,7 @@ the server can be started with the following command:
 NOTE: scripts will not work when project is built with "play dist"
 You must create the Lucene index some other way when running in standalone mode
 
-#Build as Library
+##Build as Library
 If you just want to use the Protomapper-Search library in your own application,
 execute the following:
 
