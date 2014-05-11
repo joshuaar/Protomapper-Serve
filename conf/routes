@@ -4,7 +4,7 @@
 
 # Home page
 GET     /                           controllers.Application.index
-GET     /query						controllers.Application.query(q,r)
+GET     /query						controllers.Application.query(q,r,orgs,db)
 GET     /summary                    controllers.Application.summary(q)
 GET     /download                    controllers.Application.download(q)
 

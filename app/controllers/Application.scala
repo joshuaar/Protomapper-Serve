@@ -34,14 +34,26 @@ object Application extends Controller {
     )
   }
   
-  def query(q:String,r:String) = Action {
-    val range = r.split("%")
+  def query(q:String,r:List[String]) = Action {
+    val range = r
     val from = range(0)
     val to = range(1)
     val res = search.search(q)
     val out = res.getJSON(from.toInt, to.toInt)
     Ok(out)
   }
+   def query(q:String,r:String,orgs:String,db:String) = Action {
+    val range = r
+    val from = range(0)
+    val to = range(1)
+    val res = search.search(q,parseList(orgs),parseList(db))
+    val out = res.getJSON(from.toInt, to.toInt)
+    Ok(out)
+  }
+   
+   private def parseList(in:String):List[String] = {
+     if(in.length > 0) in.split(",").toList else List()
+   }
   
   def download(q:String) = Action {
     val res = search.search(q)

@@ -1,4 +1,5 @@
 target/
+project/target/
 modules/
 public/Protomapper-ui/
 RUNNING_PID
