@@ -43,7 +43,7 @@ object Application extends Controller {
     Ok(out)
   }
    def query(q:String,r:String,orgs:String,db:String) = Action {
-    val range = r
+    val range = r.split(",")
     val from = range(0)
     val to = range(1)
     val res = search.search(q,parseList(orgs),parseList(db))
@@ -55,8 +55,14 @@ object Application extends Controller {
      if(in.length > 0) in.split(",").toList else List()
    }
   
-  def download(q:String) = Action {
-    val res = search.search(q)
+  def getIndexed(field:String) = Action {
+    val res = access.getIndexedTerms(field)
+    val out = "["+res.map(a=> """"""" + a + """"""").mkString(",")+"]"
+    Ok(out)
+  }
+   
+  def download(q:String,orgs:String,db:String) = Action {
+    val res = search.search(q,parseList(orgs),parseList(db))
     val (data,reader) = res.getFastaStream()
     val dataBytes = data.view.map(a=>a.getBytes()).toIterator
     class ClosableIterator extends Iterator[Array[Byte]]{
@@ -75,8 +81,8 @@ object Application extends Controller {
     Ok.stream(dataContent.andThen({Enumerator.eof})).withHeaders(CONTENT_TYPE -> "text/plain").withHeaders(CONTENT_DISPOSITION -> "attachment; filename=download.fasta")
   }
   
-  def summary(q:String) = Action {
-    val res = search.search(q)
+  def summary(q:String,orgs:String,db:String) = Action {
+    val res = search.search(q,parseList(orgs),parseList(db))
     val out = res.countOrgsJSON()
     Ok(out)
   }
