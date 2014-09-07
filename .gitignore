@@ -1,7 +1,7 @@
 target/
 project/target/
-modules/
-public/Protomapper-ui/
+test/db/
+db/
 logs/
 RUNNING_PID
 README
